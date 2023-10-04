@@ -23,22 +23,22 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="这里我们主要以CTF wiki 上UAF的例题hacknote为例 去创建一个结构体 探索堆题代码结构的真相 让pwn师傅少点逆向的痛 题目：ctf-challenges&#x2F;pwn&#x2F;heap&#x2F;use_after_free&#x2F;hitcon-training-hacknote&#x2F;hacknote at master · ctf-wiki&#x2F;ctf-">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="c:\Users\KP\AppData\Roaming\Typora\typora-user-images\image-20230926112444800.png">
-<meta property="og:image" content="c:\Users\KP\AppData\Roaming\Typora\typora-user-images\image-20230926113317228.png">
-<meta property="og:image" content="c:\Users\KP\AppData\Roaming\Typora\typora-user-images\image-20230926113708054.png">
-<meta property="og:image" content="c:\Users\KP\AppData\Roaming\Typora\typora-user-images\image-20230926113745669.png">
-<meta property="og:image" content="c:\Users\KP\AppData\Roaming\Typora\typora-user-images\image-20230926145358287.png">
-<meta property="og:image" content="c:\Users\KP\AppData\Roaming\Typora\typora-user-images\image-20230926145638994.png">
-<meta property="og:image" content="c:\Users\KP\AppData\Roaming\Typora\typora-user-images\image-20230926145754188.png">
-<meta property="og:image" content="c:\Users\KP\AppData\Roaming\Typora\typora-user-images\image-20230926145850975.png">
-<meta property="og:image" content="c:\Users\KP\AppData\Roaming\Typora\typora-user-images\image-20230926150042763.png">
-<meta property="og:image" content="c:\Users\KP\AppData\Roaming\Typora\typora-user-images\image-20230926150206058.png">
-<meta property="og:image" content="c:\Users\KP\AppData\Roaming\Typora\typora-user-images\image-20230926150308428.png">
+<meta property="og:image" content="https://kee02p.github.io/%E5%85%88%E2%80%9D%E6%96%A9%E2%80%9C%E7%BB%93%E6%9E%84%E4%BD%93/image-20230926112444800-1696396536733-1.png">
+<meta property="og:image" content="https://kee02p.github.io/%E5%85%88%E2%80%9D%E6%96%A9%E2%80%9C%E7%BB%93%E6%9E%84%E4%BD%93/image-20230926113317228-1696396536733-2.png">
+<meta property="og:image" content="https://kee02p.github.io/%E5%85%88%E2%80%9D%E6%96%A9%E2%80%9C%E7%BB%93%E6%9E%84%E4%BD%93/image-20230926113708054-1696396536733-3.png">
+<meta property="og:image" content="https://kee02p.github.io/%E5%85%88%E2%80%9D%E6%96%A9%E2%80%9C%E7%BB%93%E6%9E%84%E4%BD%93/image-20230926113745669-1696396536733-4.png">
+<meta property="og:image" content="https://kee02p.github.io/%E5%85%88%E2%80%9D%E6%96%A9%E2%80%9C%E7%BB%93%E6%9E%84%E4%BD%93/image-20230926145358287-1696396536733-5.png">
+<meta property="og:image" content="https://kee02p.github.io/%E5%85%88%E2%80%9D%E6%96%A9%E2%80%9C%E7%BB%93%E6%9E%84%E4%BD%93/image-20230926145638994-1696396536733-6.png">
+<meta property="og:image" content="https://kee02p.github.io/%E5%85%88%E2%80%9D%E6%96%A9%E2%80%9C%E7%BB%93%E6%9E%84%E4%BD%93/image-20230926145754188-1696396536733-7.png">
+<meta property="og:image" content="https://kee02p.github.io/%E5%85%88%E2%80%9D%E6%96%A9%E2%80%9C%E7%BB%93%E6%9E%84%E4%BD%93/image-20230926145850975-1696396536733-8.png">
+<meta property="og:image" content="https://kee02p.github.io/%E5%85%88%E2%80%9D%E6%96%A9%E2%80%9C%E7%BB%93%E6%9E%84%E4%BD%93/image-20230926150042763-1696396536733-9.png">
+<meta property="og:image" content="https://kee02p.github.io/%E5%85%88%E2%80%9D%E6%96%A9%E2%80%9C%E7%BB%93%E6%9E%84%E4%BD%93/image-20230926150206058-1696396536733-10.png">
+<meta property="og:image" content="https://kee02p.github.io/%E5%85%88%E2%80%9D%E6%96%A9%E2%80%9C%E7%BB%93%E6%9E%84%E4%BD%93/image-20230926150308428-1696396536733-11.png">
 <meta property="article:published_time" content="2023-10-04T04:43:41.000Z">
-<meta property="article:modified_time" content="2023-10-04T04:47:17.541Z">
+<meta property="article:modified_time" content="2023-10-04T05:15:45.430Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="c:\Users\KP\AppData\Roaming\Typora\typora-user-images\image-20230926112444800.png">
+<meta name="twitter:image" content="https://kee02p.github.io/%E5%85%88%E2%80%9D%E6%96%A9%E2%80%9C%E7%BB%93%E6%9E%84%E4%BD%93/image-20230926112444800-1696396536733-1.png">
   
   
   
@@ -338,34 +338,34 @@
 </blockquote>
 <p>根据指针的运算 我们知道</p>
 <p>其实这里的4 是四个字节 而这里的1 是加了一个整数类型</p>
-<p><img src="C:\Users\KP\AppData\Roaming\Typora\typora-user-images\image-20230926112444800.png" srcset="/img/loading.gif" lazyload alt="image-20230926112444800"></p>
+<p><img src="/%E5%85%88%E2%80%9D%E6%96%A9%E2%80%9C%E7%BB%93%E6%9E%84%E4%BD%93/image-20230926112444800-1696396536733-1.png" srcset="/img/loading.gif" lazyload alt="image-20230926112444800"></p>
 <h2 id="2-创造结构体"><a href="#2-创造结构体" class="headerlink" title="2.创造结构体"></a>2.创造结构体</h2><p>根据分析内容 我们开始尝试去创建结构体</p>
 <p>我们可以直接使用shift＋F1 来进入struct的页面 ida里允许我们直接去写一段c代码的struct来插入(我们只需要在struct界面敲insert键)</p>
-<p><img src="C:\Users\KP\AppData\Roaming\Typora\typora-user-images\image-20230926113317228.png" srcset="/img/loading.gif" lazyload alt="image-20230926113317228"></p>
+<p><img src="/%E5%85%88%E2%80%9D%E6%96%A9%E2%80%9C%E7%BB%93%E6%9E%84%E4%BD%93/image-20230926113317228-1696396536733-2.png" srcset="/img/loading.gif" lazyload alt="image-20230926113317228"></p>
 <p>我们去拟定我们的代码</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c"># 我们创建一个名叫hacknote的结构体 并且起了一个简写名称叫note<br><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">note</span>&#123;</span><br>	<span class="hljs-type">char</span> * print_ptr;<br>	<span class="hljs-type">char</span> * content;<br>&#125;hacknote;<br></code></pre></td></tr></table></figure>
 
 <p>如下图所示:</p>
-<p><img src="C:\Users\KP\AppData\Roaming\Typora\typora-user-images\image-20230926113708054.png" srcset="/img/loading.gif" lazyload alt="image-20230926113708054"></p>
+<p><img src="/%E5%85%88%E2%80%9D%E6%96%A9%E2%80%9C%E7%BB%93%E6%9E%84%E4%BD%93/image-20230926113708054-1696396536733-3.png" srcset="/img/loading.gif" lazyload alt="image-20230926113708054"></p>
 <p>我们成功的添加进入了 两个结构体</p>
-<p><img src="C:\Users\KP\AppData\Roaming\Typora\typora-user-images\image-20230926113745669.png" srcset="/img/loading.gif" lazyload alt="image-20230926113745669"></p>
+<p><img src="/%E5%85%88%E2%80%9D%E6%96%A9%E2%80%9C%E7%BB%93%E6%9E%84%E4%BD%93/image-20230926113745669-1696396536733-4.png" srcset="/img/loading.gif" lazyload alt="image-20230926113745669"></p>
 <h2 id="3-修改数据类型"><a href="#3-修改数据类型" class="headerlink" title="3.修改数据类型"></a>3.修改数据类型</h2><p>我们先修改第一块内容的&amp;notelist+i的内容 按“Y”键查看 ida本来给他识别的数据类型</p>
-<p><img src="C:\Users\KP\AppData\Roaming\Typora\typora-user-images\image-20230926145358287.png" srcset="/img/loading.gif" lazyload alt="image-20230926145358287"></p>
+<p><img src="/%E5%85%88%E2%80%9D%E6%96%A9%E2%80%9C%E7%BB%93%E6%9E%84%E4%BD%93/image-20230926145358287-1696396536733-5.png" srcset="/img/loading.gif" lazyload alt="image-20230926145358287"></p>
 <p>按照循环我们知道 应该是会创建5个notelist数组 这里我们能直接修改数组内容</p>
-<p><img src="C:\Users\KP\AppData\Roaming\Typora\typora-user-images\image-20230926145638994.png" srcset="/img/loading.gif" lazyload alt="image-20230926145638994"></p>
+<p><img src="/%E5%85%88%E2%80%9D%E6%96%A9%E2%80%9C%E7%BB%93%E6%9E%84%E4%BD%93/image-20230926145638994-1696396536733-6.png" srcset="/img/loading.gif" lazyload alt="image-20230926145638994"></p>
 <p>修改数组内容如下：</p>
-<p><img src="C:\Users\KP\AppData\Roaming\Typora\typora-user-images\image-20230926145754188.png" srcset="/img/loading.gif" lazyload alt="image-20230926145754188"></p>
+<p><img src="/%E5%85%88%E2%80%9D%E6%96%A9%E2%80%9C%E7%BB%93%E6%9E%84%E4%BD%93/image-20230926145754188-1696396536733-7.png" srcset="/img/loading.gif" lazyload alt="image-20230926145754188"></p>
 <p>我们可以看到 notelist数组已经被修的十分完美了</p>
-<p><img src="C:\Users\KP\AppData\Roaming\Typora\typora-user-images\image-20230926145850975.png" srcset="/img/loading.gif" lazyload alt="image-20230926145850975"></p>
+<p><img src="/%E5%85%88%E2%80%9D%E6%96%A9%E2%80%9C%E7%BB%93%E6%9E%84%E4%BD%93/image-20230926145850975-1696396536733-8.png" srcset="/img/loading.gif" lazyload alt="image-20230926145850975"></p>
 <blockquote>
 <p>接下来我们来使用我们的结构体</p>
 </blockquote>
 <p>同样的 我们选中notelist数组 修改类型</p>
-<p><img src="C:\Users\KP\AppData\Roaming\Typora\typora-user-images\image-20230926150042763.png" srcset="/img/loading.gif" lazyload alt="image-20230926150042763"></p>
+<p><img src="/%E5%85%88%E2%80%9D%E6%96%A9%E2%80%9C%E7%BB%93%E6%9E%84%E4%BD%93/image-20230926150042763-1696396536733-9.png" srcset="/img/loading.gif" lazyload alt="image-20230926150042763"></p>
 <p>这里我们看到这个类型为void型 我们可以改成我们的结构类型note</p>
-<p><img src="C:\Users\KP\AppData\Roaming\Typora\typora-user-images\image-20230926150206058.png" srcset="/img/loading.gif" lazyload alt="image-20230926150206058"></p>
+<p><img src="/%E5%85%88%E2%80%9D%E6%96%A9%E2%80%9C%E7%BB%93%E6%9E%84%E4%BD%93/image-20230926150206058-1696396536733-10.png" srcset="/img/loading.gif" lazyload alt="image-20230926150206058"></p>
 <p>修完后 我们就可以很清楚的发现我们的代码更清晰了</p>
-<p><img src="C:\Users\KP\AppData\Roaming\Typora\typora-user-images\image-20230926150308428.png" srcset="/img/loading.gif" lazyload alt="image-20230926150308428"></p>
+<p><img src="/%E5%85%88%E2%80%9D%E6%96%A9%E2%80%9C%E7%BB%93%E6%9E%84%E4%BD%93/image-20230926150308428-1696396536733-11.png" srcset="/img/loading.gif" lazyload alt="image-20230926150308428"></p>
 <blockquote>
 <p>到此，你就已经完成了一次结构体的创建与修复。</p>
 </blockquote>
