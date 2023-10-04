@@ -253,13 +253,13 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2023/10/04/%E5%85%88%E2%80%9D%E6%96%A9%E2%80%9C%E7%BB%93%E6%9E%84%E4%BD%93/" target="_self">
+        <a href="/2023/09/26/%E5%85%88%E2%80%9D%E6%96%A9%E2%80%9C%E7%BB%93%E6%9E%84%E4%BD%93/" target="_self">
           打堆第一步,先”斩“结构体
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/04/%E5%85%88%E2%80%9D%E6%96%A9%E2%80%9C%E7%BB%93%E6%9E%84%E4%BD%93/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/09/26/%E5%85%88%E2%80%9D%E6%96%A9%E2%80%9C%E7%BB%93%E6%9E%84%E4%BD%93/" target="_self">
         <div>
           这里我们主要以CTF wiki 上UAF的例题hacknote为例 去创建一个结构体 探索堆题代码结构的真相 让pwn师傅少点逆向的痛 题目：ctf-challenges&#x2F;pwn&#x2F;heap&#x2F;use_after_free&#x2F;hitcon-training-hacknote&#x2F;hacknote at master · ctf-wiki&#x2F;ctf-
         </div>
@@ -269,8 +269,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-10-04 12:43" pubdate>
-              2023-10-04
+            <time datetime="2023-09-26 15:13" pubdate>
+              2023-09-26
             </time>
           </div>
         
@@ -286,15 +286,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2023/10/03/hello-world/" target="_self">
-          Hello World
+        <a href="/2023/09/22/%E6%A0%BC%E6%8C%96%E7%9F%BF/" target="_self">
+          记一次仿真挖矿的&#34;彻底&#34;清除
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/03/hello-world/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/09/22/%E6%A0%BC%E6%8C%96%E7%9F%BF/" target="_self">
         <div>
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick
+          发现首先find &#x2F; -mmin 2 查看一下两分钟的运行进程  我们发现back kthreads都有问题 我们依次来看 查看back文件如下 发现循环写入的文件 我们要找维持文件 我们接着找维持文件  查看kthreads文件 成功发现维持文件  打开crontab 发现了计划文件  我们再运行netstat -antp 找一下外连  这里我们成功发现外连ip 和程序 实操我们先消灭
         </div>
       </a>
 
@@ -302,8 +302,41 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-10-03 16:25" pubdate>
-              2023-10-03
+            <time datetime="2023-09-22 21:27" pubdate>
+              2023-09-22
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/08/05/%E6%A0%BC%E5%BC%8Faformat/" target="_self">
+          浅谈非栈上格式化字符串
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/08/05/%E6%A0%BC%E5%BC%8Faformat/" target="_self">
+        <div>
+          这里先浅分析修改返回地址的两种打法，分别是”诸葛连弩”和”四马分肥“  修改返回地址 本文例题 以陕西省赛easy_printf为主  无法修改got表地址 我们采用直接修改ret地址     简单看一看程序 需要先过一个判断然后进入vuln  进入后 有一个13次的循环 可以让我们操作  第一步 肯定要先leak出栈地址 程序基地址和libc基地址 第二步 修改ret地址 改为one_gadg
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-08-05 21:30" pubdate>
+              2023-08-05
             </time>
           </div>
         
