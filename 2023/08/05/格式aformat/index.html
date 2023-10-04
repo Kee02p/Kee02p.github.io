@@ -16,14 +16,14 @@
   <meta name="author" content="Kee02p">
   <meta name="keywords" content="">
   
-    <meta name="description" content="这里先浅分析修改返回地址的两种打法，分别是”诸葛连弩”和”四马分肥“  修改返回地址 本文例题 以陕西省赛easy_printf为主  无法修改got表地址 我们采用直接修改ret地址     简单看一看程序 需要先过一个判断然后进入vuln  进入后 有一个13次的循环 可以让我们操作  第一步 肯定要先leak出栈地址 程序基地址和libc基地址 第二步 修改ret地址 改为one_gadg">
+    <meta name="description" content="这里先浅分析修改返回地址的两种打法，分别是”诸葛连弩”和”四马分肥“  修改返回地址 本文例题 以陕西省赛easy_printf为主  无法修改got表地址 我们采用直接修改ret地址  简单看一看程序 需要先过一个判断然后进入vuln  进入后 有一个13次的循环 可以让我们操作  第一步 肯定要先leak出栈地址 程序基地址和libc基地址 第二步 修改ret地址 改为one_gadget">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浅谈非栈上格式化字符串">
 <meta property="og:url" content="https://kee02p.github.io/2023/08/05/%E6%A0%BC%E5%BC%8Faformat/index.html">
 <meta property="og:site_name" content="欢迎来到Kee02p的小屋~">
-<meta property="og:description" content="这里先浅分析修改返回地址的两种打法，分别是”诸葛连弩”和”四马分肥“  修改返回地址 本文例题 以陕西省赛easy_printf为主  无法修改got表地址 我们采用直接修改ret地址     简单看一看程序 需要先过一个判断然后进入vuln  进入后 有一个13次的循环 可以让我们操作  第一步 肯定要先leak出栈地址 程序基地址和libc基地址 第二步 修改ret地址 改为one_gadg">
+<meta property="og:description" content="这里先浅分析修改返回地址的两种打法，分别是”诸葛连弩”和”四马分肥“  修改返回地址 本文例题 以陕西省赛easy_printf为主  无法修改got表地址 我们采用直接修改ret地址  简单看一看程序 需要先过一个判断然后进入vuln  进入后 有一个13次的循环 可以让我们操作  第一步 肯定要先leak出栈地址 程序基地址和libc基地址 第二步 修改ret地址 改为one_gadget">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://kee02p.github.io/2023/08/05/images/format/image-20230805195229862.png">
+<meta property="og:image" content="https://kee02p.github.io/images/format/image-20230805195229862.png">
 <meta property="og:image" content="https://kee02p.github.io/images/format/image-20230805195120134.png">
 <meta property="og:image" content="https://kee02p.github.io/images/format/image-20230805195344959.png">
 <meta property="og:image" content="https://kee02p.github.io/images/format/image-20230805200230567.png">
@@ -39,11 +39,11 @@
 <meta property="og:image" content="https://kee02p.github.io/images/format/image-20230805205444654.png">
 <meta property="og:image" content="https://kee02p.github.io/images/format/image-20230805205547826.png">
 <meta property="article:published_time" content="2023-08-05T13:30:03.000Z">
-<meta property="article:modified_time" content="2023-10-04T15:26:38.437Z">
+<meta property="article:modified_time" content="2023-10-04T15:37:05.335Z">
 <meta property="article:author" content="Kee02p">
 <meta property="article:tag" content="结构体">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://kee02p.github.io/2023/08/05/images/format/image-20230805195229862.png">
+<meta name="twitter:image" content="https://kee02p.github.io/images/format/image-20230805195229862.png">
   
   
   
@@ -337,10 +337,7 @@
 <p>本文例题 以陕西省赛easy_printf为主</p>
 </blockquote>
 <p>无法修改got表地址 我们采用直接修改ret地址</p>
-<img src="../images/format/image-20230805195229862.png" srcset="/img/loading.gif" lazyload alt="image-20230805195229862"  />
-
-
-
+<p><img src="/../images/format/image-20230805195229862.png" srcset="/img/loading.gif" lazyload></p>
 <p>简单看一看程序 需要先过一个判断然后进入vuln</p>
 <p><img src="/../images/format/image-20230805195120134.png" srcset="/img/loading.gif" lazyload alt="image-20230805195120134"></p>
 <p>进入后 有一个13次的循环 可以让我们操作</p>
